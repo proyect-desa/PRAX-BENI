@@ -468,31 +468,6 @@ footer {
     }
 }
 
-@media (max-width:760px) {
-
-    .hero .w,
-    .counter,
-    .two,
-    .main-p {
-        grid-template-columns: 1fr
-    }
-
-    .hero svg {
-        max-width: 11rem;
-        margin: 0 auto
-    }
-
-    .btn.o {
-        margin: .6rem 0 0
-    }
-
-    header .w {
-        flex-direction: column;
-        align-items: flex-start;
-        gap: .3rem
-    }
-}
-
 .mapa {
     min-height: 20rem;
     border-radius: .9rem;
@@ -609,4 +584,65 @@ nav a[aria-current] {
     height: auto;
     justify-self: center;
     object-fit: contain
+}
+
+/* ===== Responsive (al final para ganar sobre las reglas anteriores) ===== */
+img, iframe { max-width: 100% }
+
+/* Tablet */
+@media (max-width:900px) {
+    .w { padding: 0 1.1rem }
+    section { padding: 3.5rem 0 }
+    .hero .w { padding-top: 3rem; padding-bottom: 4rem; gap: 1.5rem }
+    .counter { padding: 1.5rem; gap: 1.2rem }
+    .two { gap: 1.2rem }
+}
+
+/* Celular */
+@media (max-width:760px) {
+    html { scroll-padding-top: 7rem }
+    body { font-size: 1rem }
+    header .w { flex-direction: column; align-items: flex-start; gap: .2rem; padding-top: .5rem; padding-bottom: .4rem }
+    nav { width: 100%; gap: 1rem; padding-bottom: .2rem; -webkit-overflow-scrolling: touch }
+    nav a { padding: .5rem 0 }
+    .hero .w, .counter, .two, .main-p { grid-template-columns: 1fr }
+    .hero .w { padding-top: 2.2rem; padding-bottom: 3.5rem }
+    .hero p { font-size: 1.05rem }
+    .hero-img { max-width: 14rem; margin: 0 auto }
+    .btn { display: block; text-align: center; width: 100% }
+    .btn.o { margin: .7rem 0 0 }
+    section { padding: 2.8rem 0 }
+    .lead { margin-bottom: 1.4rem }
+    .card { padding: 1.1rem }
+    .main-p { gap: 1rem; text-align: center; justify-items: center }
+    .main-p img { margin: 0 auto }
+    .counter { padding: 1.2rem }
+    .stepper { justify-content: center }
+    .out strong { font-size: 2rem }
+    .mapa, .mapa iframe { min-height: 16rem }
+    details { padding: .1rem 1rem }
+    .art { padding-bottom: 3rem }
+    .art h2 { margin-top: 2rem }
+}
+
+/* Celulares pequeños */
+@media (max-width:480px) {
+    .w { padding: 0 .9rem }
+    h2 { font-size: 1.65rem }
+    .hero h1 { font-size: 2rem }
+    .price { font-size: 1.6rem }
+    .search { flex-direction: column }
+    .stepper button { width: 2.8rem; height: 2.8rem }
+    .stepper input { width: 4.5rem; font-size: 1.3rem }
+    .wa { padding: .8rem; right: .8rem }
+    .wa span { display: none }
+    .logo { font-size: 1.05rem }
+    footer { font-size: .88rem; padding-left: .5rem; padding-right: .5rem }
+}
+
+/* Pantallas muy angostas (320 px) */
+@media (max-width:360px) {
+    .hero h1 { font-size: 1.75rem }
+    .logo { white-space: normal }
+    .grid { grid-template-columns: 1fr }
 }
